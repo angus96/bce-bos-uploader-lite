@@ -157,7 +157,7 @@ var uploader = new baidubce.bos.Uploader({
 |*名称*|*是否必填*|*默认值*|*说明*|
 |-----|---------|-------|-----|
 |browse_button|Y|无|例如 `#file`|
-|bos_bucket|N|无|需要上传到的Bucket|
+|bos_bucket|Y|无|需要上传到的Bucket|
 |bos_endpoint|N|http://bj.bcebos.com|BOS服务器的地址|
 |bos_task_parallel|N|3|队列中文件并行上传的个数|
 |auto_start|N|false|选择文件之后，是否自动上传|
