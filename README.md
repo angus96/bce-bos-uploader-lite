@@ -8,7 +8,7 @@ IE8+, Firefox, Chrome, Safari, Opera
 
 ```html
 <!--[if lte IE 9]><script src="https://cdn.rawgit.com/moxiecode/moxie/v1.4.1/bin/js/moxie.min.js"></script><![endif]-->
-<script src="https://cdn.bdstatic.com/bce-bos-uploader-lite/1.0.6/bce-bos-uploader-lite.min.js"></script>
+<script src="https://cdn.bdstatic.com/bce-bos-uploader-lite/1.0.7-beta.1/bce-bos-uploader-lite.min.js"></script>
 ```
 
 ### 如何使用

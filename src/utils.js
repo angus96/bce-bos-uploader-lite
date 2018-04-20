@@ -21,6 +21,10 @@ var helper = require('./vendor/helper');
 var Queue = require('./queue');
 var MimeType = require('./bce-sdk-js/mime.types');
 
+exports.dumpError = typeof console === 'object' && typeof console.error === 'function'
+    ? function (error) { console.error(error); }
+    : u.noop;
+
 /**
  * 把文件进行切片，返回切片之后的数组
  *

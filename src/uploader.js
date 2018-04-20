@@ -174,6 +174,8 @@ Uploader.prototype._invoke = function (methodName, args, throwErrors) {
         return method.apply(null, args);
     }
     catch (ex) {
+        utils.dumpError(ex);
+
         if (throwErrors === true) {
             return Q.reject(ex);
         }

@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <title>bce-bos-uploader-lite simple demo</title>
     <!--[if lte IE 9]><script src="https://cdn.rawgit.com/moxiecode/moxie/v1.4.1/bin/js/moxie.min.js"></script><![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://bce.bdstatic.com/bce-bos-uploader-lite/1.0.4/bce-bos-uploader-lite.min.js"></script>
+    <script src="https://cdn.bdstatic.com/bce-bos-uploader-lite/1.0.7-beta.1/bce-bos-uploader-lite.min.js"></script>
     <link rel="stylesheet" type="text/css" href="demo.css" />
   </head>
   <body>
@@ -47,11 +46,13 @@
         FilesAdded: function (_, files) {
           for (var i = 0; i < files.length; i++) {
             var file = files[i];
-            var item = $('<li/>').html(file.name + ' / ' + file.size).attr('fid', file.uuid);
-            $('.file-list').append(item);
+            var item = document.createElement('li');
+            item.innerHTML = file.name + ' / ' + file.size;
+            item.setAttribute('fid', file.uuid);
+            document.querySelector('.file-list').appendChild(item);
           }
           if (files.length) {
-            $('#start').attr('disabled', false);
+            document.querySelector('#start').removeAttribute('disabled');
           }
         },
         Key: function (_, file) {
@@ -69,7 +70,7 @@
           return key;
         },
         FileUploaded: function (_, file, info) {
-          $('li[fid="' + file.uuid + '"]').html(
+          document.querySelector('li[fid="' + file.uuid + '"]').innerHTML = (
             '<a target="_blank" href="' + info.body.location + '">' + file.name + ' / ' + file.size + '</a>');
         },
         UploadComplete: function () {
@@ -78,9 +79,9 @@
       }
     });
 
-    $('#start').click(function () {
-      var bucket = $('#bos_bucket').val();
-      var endpoint = $('#bos_endpoint').val();
+    document.querySelector('#start').onclick = function () {
+      var bucket = document.querySelector('#bos_bucket').value;
+      var endpoint = document.querySelector('#bos_endpoint').value;
       if (!bucket || !endpoint) {
         alert('请填写 bucket, endpoint 等配置信息');
         return false;
@@ -91,7 +92,7 @@
         bos_endpoint: endpoint
       });
       uploader.start();
-    });
+    };
     </script>
   </body>
 </html>
