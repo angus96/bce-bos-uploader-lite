@@ -1,6 +1,6 @@
 ### Baidu Cloud Engine BOS Uploader (Lite)
 
-bce-bos-uploader-lite 是 [bce-bos-uploader](https://github.com/leeight/bce-bos-uploader) 的精简版，裁剪了不太常用的功能组件，保留了核心的上传功能，当前 1.0.5 版本 `*.min.js` 文件大小在 gzip 前后的情况是 47k / 16k。
+bce-bos-uploader-lite 是 [bce-bos-uploader](https://github.com/leeight/bce-bos-uploader) 的精简版，裁剪了不太常用的功能组件，保留了核心的上传功能，当前 1.0.6 版本 `*.min.js` 文件大小在 gzip 前后的情况是 133k / 47k。
 
 ### 支持的浏览器
 
@@ -8,7 +8,7 @@ IE8+, Firefox, Chrome, Safari, Opera
 
 ```html
 <!--[if lte IE 9]><script src="https://cdn.rawgit.com/moxiecode/moxie/v1.4.1/bin/js/moxie.min.js"></script><![endif]-->
-<script src="https://cdn.bdstatic.com/bce-bos-uploader-lite/1.0.5/bce-bos-uploader-lite.min.js"></script>
+<script src="https://cdn.bdstatic.com/bce-bos-uploader-lite/1.0.6/bce-bos-uploader-lite.min.js"></script>
 ```
 
 ### 如何使用
