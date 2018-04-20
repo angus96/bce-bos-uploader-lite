@@ -46,9 +46,9 @@ function NetworkInfo() {
 
 NetworkInfo.prototype.dump = function () {
     return [
-        this.loadedBytes,                     // 已经上传的
-        utils.now() - this._startTime,        // 花费的时间
-        this.totalBytes - this.loadedBytes    // 剩余未上传的
+        this.loadedBytes, // 已经上传的
+        utils.now() - this._startTime, // 花费的时间
+        this.totalBytes - this.loadedBytes // 剩余未上传的
     ];
 };
 

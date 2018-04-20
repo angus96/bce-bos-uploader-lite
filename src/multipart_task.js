@@ -223,8 +223,8 @@ MultipartTask.prototype._listAllParts = function (bucket, object, uploadId) {
 
     var parts = [];
     var payload = null;
-    var maxParts = 1000;          // 每次的分页
-    var partNumberMarker = 0;     // 分隔符
+    var maxParts = 1000; // 每次的分页
+    var partNumberMarker = 0; // 分隔符
 
     function listParts() {
         var options = {
@@ -281,7 +281,7 @@ MultipartTask.prototype._uploadPart = function (state) {
         var retryInterval = self.options.retry_interval;
 
         var blob = item.file.slice(item.start, item.stop + 1);
-        blob._parentUUID = item.file.uuid;    // 后续根据分片来查找原始文件的时候，会用到
+        blob._parentUUID = item.file.uuid; // 后续根据分片来查找原始文件的时候，会用到
         blob._previousLoaded = 0;
 
         var uploadPartXhr = self.client.uploadPartFromBlob(item.bucket, item.object,

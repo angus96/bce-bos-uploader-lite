@@ -27,8 +27,8 @@ var HttpClient = require('./http_client');
 var BceBaseClient = require('./bce_base_client');
 var MimeType = require('./mime.types');
 
-var MAX_PUT_OBJECT_LENGTH = 5368709120;     // 5G
-var MAX_USER_METADATA_SIZE = 2048;          // 2 * 1024
+var MAX_PUT_OBJECT_LENGTH = 5368709120; // 5G
+var MAX_USER_METADATA_SIZE = 2048; // 2 * 1024
 
 /**
  * BOS service api
@@ -164,11 +164,11 @@ BosClient.prototype.uploadPartFromBlob = function (bucketName, key, uploadId, pa
 };
 
 BosClient.prototype.listParts = function (bucketName, key, uploadId, options) {
-    /*eslint-disable*/
+    /* eslint-disable */
     if (!uploadId) {
         throw new TypeError('uploadId should not empty');
     }
-    /*eslint-enable*/
+    /* eslint-enable */
 
     var allowedParams = ['maxParts', 'partNumberMarker', 'uploadId'];
     options = this._checkOptions(options || {}, allowedParams);

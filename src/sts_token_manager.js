@@ -14,6 +14,7 @@
  * @author leeight
  */
 
+var $ = require('jquery');
 var Q = require('./vendor/q');
 var utils = require('./utils');
 

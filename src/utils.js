@@ -546,7 +546,7 @@ exports.fixXhr = function (options, isBos) {
 exports.eachLimit = function (tasks, taskParallel, executer, done) {
     var runningCount = 0;
     var aborted = false;
-    var fin = false;      // done 只能被调用一次.
+    var fin = false; // done 只能被调用一次.
     var queue = new Queue(tasks);
 
     function infiniteLoop() {

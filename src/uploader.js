@@ -14,6 +14,8 @@
  * @author leeight
  */
 
+var $ = require('jquery');
+
 var Q = require('./vendor/q');
 var u = require('./vendor/underscore');
 var utils = require('./utils');
@@ -246,7 +248,7 @@ Uploader.prototype._init = function () {
             accept: utils.expandAcceptToArray(accept),
             multiple: options.multi_selection,
             directory: options.dir_selection,
-            file: 'file'      // PostObject接口要求固定是 'file'
+            file: 'file' // PostObject接口要求固定是 'file'
         });
 
         fileInput.onchange = u.bind(this._onFilesAdded, this);

@@ -99,7 +99,7 @@ var kDefaultOptions = {
     // JSONP 默认的超时时间(5000ms)
     uptoken_via_jsonp: true,
     uptoken_timeout: 5000,
-    uptoken_jsonp_timeout: 5000,    // 不支持了，后续建议用 uptoken_timeout
+    uptoken_jsonp_timeout: 5000, // 不支持了，后续建议用 uptoken_timeout
 
     // 是否要禁用统计，默认不禁用
     // 如果需要禁用，把 tracker_id 设置成 null 即可
